@@ -1,0 +1,49 @@
+{
+	"schemaVersion": 1,
+	"id": "technocraft",
+	"version": "${version}",
+	"name": "TechnoCraft",
+	"description": "I'm a french developper and this is my first mod. My friend cahty_12 made models to help me, I hope you'll enjoy!",
+	"authors": [
+		"omega_7711",
+		"cahty_12"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/technocraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fr.omega_7711.TechnoCraft"
+		],
+		"client": [
+			"fr.omega_7711.TechnoCraftClient"
+		]
+	},
+	"mixins": [
+		"technocraft.mixins.json",
+		{
+			"config": "technocraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"badges": [
+				"library"
+			]
+		}
+	}
+}
